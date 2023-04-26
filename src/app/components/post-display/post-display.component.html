@@ -1,0 +1,9 @@
+<ng-container *ngIf="posts$ |async as postsLoaded">
+  <div class="card m-3" *ngFor="let post of postsLoaded">
+    <div class="card-body" (click)="selectPost(post.id)">
+      <h4 class="card-title">{{ post.title | uppercase}}</h4>
+      <small> <strong>Name: </strong> {{ post.name }}</small>
+      <p>{{ post.body }}</p>
+    </div>
+  </div>
+</ng-container>

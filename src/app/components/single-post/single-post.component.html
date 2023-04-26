@@ -1,0 +1,13 @@
+<div class="card m-3 p2" *ngIf="singlePost$ | async as singlePost else noPostSelected">
+  <div class="card-body">
+    <h4 class="card-title">{{ singlePost.title | uppercase}}</h4>
+    <small> <strong>Name: </strong> {{ singlePost.name }}</small>
+    <p>{{ singlePost.body }}</p>
+  </div>
+</div>
+
+<ng-template #noPostSelected>
+  <div class="card m3 p2">
+    <h1>No Post selected</h1>
+  </div>
+</ng-template>

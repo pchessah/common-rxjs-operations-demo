@@ -1,0 +1,18 @@
+<div class="card m-3">
+  <div class="card-body">
+    <div class="form-group form-inline text-left">
+      <label class="mr-4">Title: </label>
+      <input title="title-post" class="form-control col-10" #titlePost/>
+    </div>
+    <div class="form-group">
+      <label>Body: </label>
+      <textarea title="body-post" class="form-control" #bodyPost></textarea>
+    </div>
+    <br>
+    <button class="btn btn-block btn-primary" (click)="addPost({userId: 10, id: 555, title: titlePost.value, body: bodyPost.value}); titlePost.value=''; bodyPost.value=''">Post </button>
+  </div>
+</div>
+
+<div *ngIf="selectedPost" class="card m-3">
+ 
+</div>
